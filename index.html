@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <title> Patterns JS </title>
+    <meta name="Admiral_Awesome" content="Patterns JS" />
+    <script type="text/javascript" src="js/patterns.js"></script>
+    
+
+</head>
+
+
+
+<body>
+<script>
+//decorator
+
+var bear = new animal("Misha", "bear");
+    
+    bear.battleAction();
+
+var normalBear = new animalWithClaws(bear);
+
+    normalBear.battleAction();
+
+//factory
+
+var zoo = new makeAnimal("Simba", "lion");
+    var lion1 = zoo.makeSimpleAnimal();
+    var lion2 = zoo.makeAnimalWithClaws();
+
+    console.log(lion1 instanceof animal); //true
+    console.log(lion2 instanceof animalWithClaws); //true
+//singleton
+
+var SingleObj = (function(obj){
+    var object;
+
+    function create(obj) {
+        return obj;
+    }
+    return {
+        getObj : function() {
+            if ( object ) {
+                return object;
+            }
+            object = create(obj);
+            return create(obj);
+        }
+    }
+
+})(lion1);
+
+var obj1 = SingleObj.getObj();
+var obj2 = SingleObj.getObj();
+var obj3 = SingleObj.getObj();
+console.log(obj1 === obj2 && obj2 === obj3);
+
+// memoization 
+
+
+var time1 = new Date();
+var value1 = sum(1,1);
+var time2 = new Date();
+console.log( "value1 : "  + value1);
+console.log( "value1 time calc " + (time2.getTime() - time1.getTime()) /1000 + " sec "); //~ 17 sec
+
+var time1 = new Date();
+var value2 = sum(1,1);
+var time2 = new Date();
+console.log( "value2 : "  + value2);
+console.log( "value2 time calc " + (time2.getTime() - time1.getTime()) /1000 + " sec "); // ~ 0 sec
+
+</script>
+</body>
+
+</html>
