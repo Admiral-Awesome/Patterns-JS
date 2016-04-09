@@ -9,7 +9,7 @@
 ##All examples in index.html and js/patterns.js
 ###1.Decorator
 
-  This pattern is useful for adding some new properties for the object, which are not exist in native constructor.
+  This pattern is useful for adding some new properties for the object, which are not existing in native constructor.
 
   In my example there is 
     
@@ -38,7 +38,7 @@
     console.log(lion1 instanceof animal); //true
     console.log(lion2 instanceof animalWithClaws); //true
 ###3.Memoization 
-    Mostly is using for some calculation. We use some memory dump to save already calculated result.
+    It Mostly used for some calculation. We use some memory dump to save already calculated result.
     exactly calculations must be the same at the same variable
     
     In my example there is function(x,y) that calculates x+y 10000000000 times 
@@ -123,7 +123,7 @@ it means that obj1 , obj2, obj3 have the same links
 ###Observer
   The name tells about itself. We add subscriber to some events and react on it when it fires.
    
-  in my case there is Event and few observers:
+  in my case there is an Event and a few observers:
    
      newEvent.addObserver(function(data) { //callBack
         if ( data ) {
