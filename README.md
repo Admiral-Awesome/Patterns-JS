@@ -12,7 +12,8 @@
   This pattern is useful for adding some new properties for the object, which are not exist in native constructor.
 
   In my example there is 
-  `var bear = new animal("Misha", "bear");
+    
+    `var bear = new animal("Misha", "bear");
     
     bear.battleAction(); //Misha attacks
 
