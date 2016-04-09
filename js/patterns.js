@@ -46,7 +46,7 @@ function sum(x, y) {
 
     if ( sum.already[key] ) return sum.already[key];
     var tmp = 0;
-    for ( var i = 0; i < 10000000; i++, tmp += x + y); 
+    for ( var i = 0; i < 10000000000; i++, tmp += x + y); 
     sum.already[key] = tmp;
     console.log(sum.already[key] = tmp);
     return sum.already[key]; 
