@@ -132,7 +132,7 @@ var newEvent = new Event();
     
 
     var SomeObject = {
-        something : "something",
+        something : "something inside to use",
         callb : function(data) {
             if ( data ) {
         console.log(this.name + " worked with data " + data + "\nInside :" + SomeObject.something);
