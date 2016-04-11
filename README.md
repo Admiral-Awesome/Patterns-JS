@@ -6,7 +6,7 @@
 ###4.Singleton
 ###5.Mediator
 ###6.Observer
-##All examples in index.html and js/patterns.js
+##All examples in index.html and js/patterns.js .
 ###1.Decorator
 
   This pattern is useful for adding some new properties for the object, which are not existing in native constructor.
